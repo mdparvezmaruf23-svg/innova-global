@@ -1,0 +1,3384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>INNOVA.GLOBAL</title>
+
+<style>
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+body{
+  font-family:Arial,Helvetica,sans-serif;
+  min-height:100vh;
+  color:#fff;
+  background:
+    radial-gradient(circle at 15% 20%,rgba(255,193,7,.20),transparent 30%),
+    radial-gradient(circle at 85% 20%,rgba(142,68,173,.28),transparent 32%),
+    radial-gradient(circle at 50% 85%,rgba(255,0,150,.12),transparent 35%),
+    linear-gradient(135deg,#090510,#16091f 45%,#08050e);
+  overflow-x:hidden;
+}
+
+button,
+input{
+  font-family:inherit;
+}
+
+button{
+  cursor:pointer;
+}
+
+.hidden{
+  display:none!important;
+}
+
+/* =========================
+   ANIMATED TEXT
+========================= */
+
+.colorText{
+  animation:softColors 8s linear infinite;
+  font-weight:800;
+}
+
+.colorText1{
+  animation:softColors 8s linear infinite;
+  font-weight:800;
+}
+
+.colorText2{
+  animation:softColors 9s linear infinite;
+  font-weight:800;
+  animation-delay:-1s;
+}
+
+.colorText3{
+  animation:softColors 10s linear infinite;
+  font-weight:800;
+  animation-delay:-2s;
+}
+
+.colorText4{
+  animation:softColors 11s linear infinite;
+  font-weight:800;
+  animation-delay:-3s;
+}
+
+@keyframes softColors{
+  0%{color:#f6d889}
+  12%{color:#d8b4f0}
+  25%{color:#eeaeca}
+  38%{color:#8edee4}
+  50%{color:#b8e29f}
+  63%{color:#edaaaa}
+  75%{color:#f0bb82}
+  88%{color:#9ebdf2}
+  100%{color:#f6d889}
+}
+
+/* =========================
+   GENERAL
+========================= */
+
+.container{
+  width:min(1100px,94%);
+  margin:auto;
+}
+
+.page{
+  min-height:100vh;
+}
+
+.card{
+  background:rgba(10,7,18,.78);
+  border:1px solid rgba(255,210,100,.22);
+  border-radius:20px;
+  padding:20px;
+  margin:15px 0;
+  backdrop-filter:blur(10px);
+}
+
+.title{
+  text-align:center;
+  font-size:25px;
+  margin-bottom:18px;
+}
+
+.subtitle{
+  text-align:center;
+  color:#bbb;
+  margin-bottom:15px;
+}
+
+.btn{
+  width:100%;
+  border:0;
+  border-radius:14px;
+  padding:14px;
+  margin-top:10px;
+  font-size:16px;
+  font-weight:800;
+  color:white;
+  background:linear-gradient(90deg,#8e44ad,#d4af37,#9b59b6);
+  background-size:200% 200%;
+  animation:buttonMove 5s ease infinite;
+}
+
+@keyframes buttonMove{
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}
+
+.btn.secondary{
+  background:rgba(255,255,255,.08);
+  animation:none;
+}
+
+.btn.danger{
+  background:#8b2020;
+  animation:none;
+}
+
+.btn:disabled{
+  opacity:.5;
+  cursor:not-allowed;
+}
+
+input{
+  width:100%;
+  padding:14px;
+  margin:7px 0 12px;
+  border-radius:12px;
+  border:1px solid rgba(255,255,255,.15);
+  background:rgba(255,255,255,.07);
+  color:#fff;
+  outline:none;
+}
+
+input:focus{
+  border-color:#d7b45c;
+}
+
+label{
+  display:block;
+  color:#ccc;
+  font-size:14px;
+  margin-top:7px;
+}
+
+/* =========================
+   WELCOME
+========================= */
+
+#welcome{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  min-height:100vh;
+  padding:25px 0;
+}
+
+.welcomeBox{
+  width:min(650px,94%);
+  text-align:center;
+  padding:30px 20px;
+  border-radius:28px;
+  background:rgba(8,5,15,.72);
+  border:1px solid rgba(255,210,100,.25);
+}
+
+.bismillah{
+  font-size:20px;
+  margin-bottom:20px;
+  animation:softColors 8s linear infinite;
+}
+
+.welcomeSmall{
+  font-size:20px;
+  letter-spacing:3px;
+  margin-bottom:10px;
+}
+
+.logoText{
+  font-size:42px;
+  font-weight:900;
+  letter-spacing:2px;
+  margin-bottom:8px;
+}
+
+.welcomeMain{
+  font-size:24px;
+  margin-bottom:25px;
+}
+
+.stats{
+  margin-top:25px;
+}
+
+.statRow{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:15px;
+  padding:13px 4px;
+  border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+.statLabel{
+  text-align:left;
+  font-size:14px;
+  color:#d8d8d8;
+}
+
+.statValue{
+  font-size:21px;
+  min-width:100px;
+  text-align:right;
+}
+
+.startDate{
+  margin-top:22px;
+  font-size:14px;
+  color:#aaa;
+}
+
+/* =========================
+   AUTH
+========================= */
+
+.authPage{
+  padding:40px 0;
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.authCard{
+  width:min(500px,94%);
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.appHeader{
+  position:sticky;
+  top:0;
+  z-index:100;
+  padding:12px 3%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  background:rgba(7,4,12,.92);
+  border-bottom:1px solid rgba(255,255,255,.08);
+  backdrop-filter:blur(12px);
+}
+
+.iconBtn{
+  width:43px;
+  height:43px;
+  border-radius:50%;
+  border:1px solid rgba(255,210,100,.25);
+  background:rgba(255,255,255,.06);
+  color:#fff;
+  font-size:20px;
+}
+
+.headerLogo{
+  font-weight:900;
+  font-size:19px;
+}
+
+/* =========================
+   MENU
+========================= */
+
+.sideMenu{
+  position:fixed;
+  top:0;
+  left:-290px;
+  width:280px;
+  height:100vh;
+  z-index:200;
+  background:#0d0814;
+  border-right:1px solid rgba(255,210,100,.22);
+  padding:75px 15px 20px;
+  transition:.3s;
+  overflow-y:auto;
+}
+
+.sideMenu.open{
+  left:0;
+}
+
+.menuBtn{
+  width:100%;
+  text-align:left;
+  border:0;
+  border-radius:12px;
+  padding:13px;
+  margin:5px 0;
+  background:rgba(255,255,255,.05);
+  color:#fff;
+  font-size:15px;
+}
+
+.menuBtn:hover{
+  background:rgba(255,255,255,.1);
+}
+
+/* =========================
+   PROFILE
+========================= */
+
+.profileCard{
+  margin-top:15px;
+}
+
+.profileTop{
+  display:flex;
+  align-items:center;
+  gap:14px;
+}
+
+.avatar{
+  width:65px;
+  height:65px;
+  border-radius:50%;
+  object-fit:cover;
+  border:2px solid #d6b65d;
+  background:#1c1424;
+}
+
+.profileName{
+  font-size:21px;
+}
+
+.profileLine{
+  display:flex;
+  justify-content:space-between;
+  margin-top:9px;
+  color:#ccc;
+  font-size:14px;
+}
+
+.miniStats{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:8px;
+  margin-top:18px;
+}
+
+.miniStat{
+  text-align:center;
+  padding:12px 5px;
+  border-radius:13px;
+  background:rgba(255,255,255,.04);
+}
+
+.miniNumber{
+  font-size:18px;
+  font-weight:900;
+}
+
+.miniLabel{
+  font-size:11px;
+  color:#aaa;
+  margin-top:5px;
+}
+
+.showMore{
+  width:100%;
+  margin-top:14px;
+  padding:10px;
+  border:0;
+  background:transparent;
+  color:#ddd;
+}
+
+.moreBox{
+  margin-top:10px;
+  padding-top:15px;
+  border-top:1px solid rgba(255,255,255,.08);
+}
+
+.copyLink{
+  display:flex;
+  gap:7px;
+  margin-top:8px;
+}
+
+.copyLink input{
+  margin:0;
+}
+
+.copyBtn{
+  border:0;
+  border-radius:10px;
+  padding:0 14px;
+  background:#8e44ad;
+  color:#fff;
+}
+
+/* =========================
+   STATUS
+========================= */
+
+.active{
+  color:#45e276;
+  font-weight:900;
+}
+
+.inactive{
+  color:#ff5757;
+  font-weight:900;
+}
+
+.pending{
+  color:#ffd15c;
+  font-weight:900;
+}
+
+.processing{
+  color:#55dfff;
+  font-weight:900;
+}
+
+/* =========================
+   PROGRAMS
+========================= */
+
+.programGrid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(210px,1fr));
+  gap:15px;
+}
+
+.program{
+  padding:18px;
+  border-radius:18px;
+  background:rgba(255,255,255,.04);
+  border:1px solid rgba(255,255,255,.09);
+}
+
+.program h3{
+  font-size:18px;
+  margin-bottom:7px;
+}
+
+.programPrice{
+  font-size:22px;
+  margin:8px 0;
+}
+
+.activityBox{
+  margin-top:15px;
+  padding:15px;
+  border-radius:15px;
+  background:rgba(255,255,255,.04);
+}
+
+.progress{
+  height:9px;
+  border-radius:20px;
+  background:#211a29;
+  overflow:hidden;
+  margin:12px 0;
+}
+
+.progressBar{
+  height:100%;
+  width:0%;
+  background:linear-gradient(90deg,#d4af37,#9b59b6,#ff5ca8);
+  transition:.4s;
+}
+
+/* =========================
+   TABLE
+========================= */
+
+.tableWrap{
+  overflow-x:auto;
+}
+
+table{
+  width:100%;
+  border-collapse:collapse;
+}
+
+th,td{
+  padding:10px;
+  border-bottom:1px solid rgba(255,255,255,.08);
+  text-align:left;
+  font-size:13px;
+}
+
+th{
+  color:#d8b45f;
+}
+
+/* =========================
+   TOAST
+========================= */
+
+.toast{
+  position:fixed;
+  bottom:20px;
+  left:50%;
+  transform:translateX(-50%) translateY(80px);
+  background:#17101f;
+  border:1px solid rgba(255,210,100,.3);
+  padding:12px 18px;
+  border-radius:12px;
+  z-index:500;
+  opacity:0;
+  transition:.3s;
+}
+
+.toast.show{
+  transform:translateX(-50%) translateY(0);
+  opacity:1;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:600px){
+  .logoText{
+    font-size:31px;
+  }
+
+  .welcomeMain{
+    font-size:20px;
+  }
+
+  .miniStats{
+    gap:5px;
+  }
+
+  .miniNumber{
+    font-size:16px;
+  }
+
+  .programGrid{
+    grid-template-columns:1fr;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- =========================================================
+     WELCOME
+========================================================= -->
+
+<section id="welcome" class="page">
+
+  <div class="welcomeBox">
+
+    <div class="bismillah">
+      بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ
+    </div>
+
+    <div class="welcomeSmall colorText1">
+      ✨ WELCOME ✨
+    </div>
+
+    <div class="logoText colorText2">
+      🌐 INNOVA.GLOBAL
+    </div>
+
+    <div class="welcomeMain colorText3">
+      WELCOME TO INNOVA.GLOBAL
+    </div>
+
+    <button class="btn" onclick="showRegister()">
+      🚀 JOIN INNOVA.GLOBAL
+    </button>
+
+    <button class="btn secondary" onclick="showLogin()">
+      🔐 LOGIN
+    </button>
+
+    <div class="stats">
+
+      <div class="statRow">
+        <div class="statLabel">
+          👥 TOTAL PARTNERS
+        </div>
+        <div id="totalPartners" class="statValue colorText">
+          000
+        </div>
+      </div>
+
+      <div class="statRow">
+        <div class="statLabel">
+          💰 TOTAL EARNINGS
+        </div>
+        <div id="totalEarnings" class="statValue colorText2">
+          ৳000
+        </div>
+      </div>
+
+      <div class="statRow">
+        <div class="statLabel">
+          📝 TOTAL JOINING
+        </div>
+        <div id="totalJoining" class="statValue colorText3">
+          000
+        </div>
+      </div>
+
+      <div class="statRow">
+        <div class="statLabel">
+          📅 TODAY'S JOINING
+        </div>
+        <div id="todayJoining" class="statValue colorText4">
+          000
+        </div>
+      </div>
+
+    </div>
+
+    <div class="startDate">
+      📅 JOINING STARTED<br>
+      <strong>11 September 2026</strong>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- =========================================================
+     REGISTER
+========================================================= -->
+
+<section id="registerPage" class="authPage hidden">
+
+  <div class="card authCard">
+
+    <div class="title colorText">
+      🚀 JOIN INNOVA.GLOBAL
+    </div>
+
+    <div class="subtitle">
+      Create your INNOVA account
+    </div>
+
+    <label>Full Name</label>
+    <input id="regName" type="text" placeholder="Enter your full name">
+
+    <label>Mobile Number</label>
+    <input id="regMobile" type="tel" placeholder="01XXXXXXXXX">
+
+    <label>Password</label>
+    <input id="regPassword" type="password" placeholder="Create password">
+
+    <label>Referral ID</label>
+    <input id="regReferral" type="text" placeholder="001">
+
+    <div id="refNotice" style="font-size:13px;color:#aaa;margin-bottom:5px;"></div>
+
+    <button class="btn" onclick="registerUser()">
+      CREATE ACCOUNT
+    </button>
+
+    <button class="btn secondary" onclick="showLogin()">
+      Already have account? LOGIN
+    </button>
+
+    <button class="btn secondary" onclick="showWelcome()">
+      ← BACK
+    </button>
+
+  </div>
+</section>
+
+
+<!-- =========================================================
+     LOGIN
+========================================================= -->
+
+<section id="loginPage" class="authPage hidden">
+
+  <div class="card authCard">
+
+    <div class="title colorText">
+      🔐 LOGIN
+    </div>
+
+    <div class="subtitle">
+      Login to your INNOVA account
+    </div>
+
+    <label>INNOVA ID / Mobile</label>
+    <input id="loginIdentity" type="text" placeholder="001 or mobile">
+
+    <label>Password</label>
+    <input id="loginPassword" type="password" placeholder="Password">
+
+    <button class="btn" onclick="loginUser()">
+      LOGIN
+    </button>
+
+    <button class="btn secondary" onclick="showRegister()">
+      Don't have an account? JOIN
+    </button>
+
+    <button class="btn secondary" onclick="showWelcome()">
+      ← BACK
+    </button>
+
+  </div>
+</section>
+
+
+<!-- =========================================================
+     MAIN APP
+========================================================= -->
+
+<section id="appPage" class="page hidden">
+
+  <!-- HEADER -->
+  <header class="appHeader">
+
+    <button class="iconBtn" onclick="toggleMenu()">
+      ☰
+    </button>
+
+    <div class="headerLogo colorText">
+      INNOVA.GLOBAL
+    </div>
+
+    <button class="iconBtn" onclick="openSettings()">
+      ⚙️
+    </button>
+
+  </header>
+
+
+  <!-- SIDE MENU -->
+  <div id="sideMenu" class="sideMenu">
+
+    <button class="menuBtn" onclick="showSection('dashboard')">
+      🏠 Dashboard
+    </button>
+
+    <button class="menuBtn" onclick="showSection('wallet')">
+      💰 Wallet
+    </button>
+
+    <button class="menuBtn" onclick="showSection('history')">
+      📜 History
+    </button>
+
+    <button class="menuBtn" onclick="showSection('notifications')">
+      🔔 Notifications
+    </button>
+
+    <button class="menuBtn" onclick="showSection('team')">
+      👥 Team
+    </button>
+
+    <button id="adminMenuBtn" class="menuBtn hidden" onclick="showSection('admin')">
+      👑 Admin Panel
+    </button>
+
+    <button class="menuBtn" onclick="logoutUser()">
+      🚪 Logout
+    </button>
+
+  </div>
+
+
+  <main class="container">
+
+    <!-- PROFILE -->
+    <div id="profileSection">
+
+      <div class="card profileCard">
+
+        <div class="profileTop">
+
+          <img id="profileImage"
+               class="avatar"
+               src=""
+               alt="Profile">
+
+          <div>
+            <div id="profileName" class="profileName colorText">
+              USER
+            </div>
+
+            <div id="profileRole"
+                 style="font-size:12px;color:#999;margin-top:4px;">
+              USER
+            </div>
+          </div>
+
+        </div>
+
+        <div class="profileLine">
+          <span>INNOVA ID</span>
+          <strong id="profileId" class="colorText1">
+            001
+          </strong>
+        </div>
+
+        <div class="profileLine">
+          <span>STATUS</span>
+          <strong id="profileStatus">
+            🔴 INACTIVE
+          </strong>
+        </div>
+
+        <div class="profileLine">
+          <span>UPLINE ID</span>
+          <strong id="profileUpline">
+            NONE
+          </strong>
+        </div>
+
+
+        <div class="miniStats">
+
+          <div class="miniStat">
+            <div id="profilePartners"
+                 class="miniNumber colorText">
+              000
+            </div>
+            <div class="miniLabel">
+              PARTNERS
+            </div>
+          </div>
+
+          <div class="miniStat">
+            <div id="profileTeam"
+                 class="miniNumber colorText2">
+              000
+            </div>
+            <div class="miniLabel">
+              MY TEAM
+            </div>
+          </div>
+
+          <div class="miniStat">
+            <div id="profileEarnings"
+                 class="miniNumber colorText3">
+              ৳000
+            </div>
+            <div class="miniLabel">
+              EARNINGS
+            </div>
+          </div>
+
+        </div>
+
+
+        <button class="showMore" onclick="toggleMore()">
+          <span class="colorText4">▾ SHOW MORE</span>
+        </button>
+
+
+        <div id="moreBox" class="moreBox hidden">
+
+          <div style="margin-bottom:10px;">
+            📋 <strong>LINE ID CHECK</strong>
+          </div>
+
+          <div class="profileLine">
+            <span>INNOVA ID</span>
+            <strong id="moreId">001</strong>
+          </div>
+
+          <div class="profileLine">
+            <span>UPLINE ID</span>
+            <strong id="moreUpline">NONE</strong>
+          </div>
+
+          <div style="margin-top:18px;">
+            🔗 <strong>MY REFERRAL LINK</strong>
+          </div>
+
+          <div class="copyLink">
+            <input id="myReferralLink" readonly>
+            <button class="copyBtn" onclick="copyReferral()">
+              COPY
+            </button>
+          </div>
+
+          <div class="profileLine">
+            <span>📅 JOINING DATE</span>
+            <strong id="joiningDate">
+              -
+            </strong>
+          </div>
+
+          <div class="profileLine">
+            <span>⏳ JOINING TIME</span>
+            <strong id="joiningTime">
+              -
+            </strong>
+          </div>
+
+          <div class="profileLine">
+            <span>📆 JOINING DURATION</span>
+            <strong id="joiningDuration">
+              0 Days
+            </strong>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- DASHBOARD -->
+    <section id="dashboardSection">
+
+      <div class="card">
+
+        <div class="title colorText">
+          🏠 DASHBOARD
+        </div>
+
+        <div id="activationBox">
+
+          <div class="activityBox">
+
+            <h3 class="colorText">
+              🔐 ACTIVATE YOUR ACCOUNT
+            </h3>
+
+            <p style="margin-top:8px;color:#bbb;">
+              INNOVA ID:
+              <strong id="activationId">
+                001
+              </strong>
+            </p>
+
+            <p style="margin-top:6px;">
+              Status:
+              <strong id="activationStatus">
+                🔴 INACTIVE
+              </strong>
+            </p>
+
+            <p style="margin-top:10px;">
+              Activation Fee:
+              <strong class="colorText">
+                ৳100
+              </strong>
+            </p>
+
+            <button class="btn" onclick="openPaymentModal()">
+              ACTIVATE NOW
+            </button>
+
+          </div>
+
+        </div>
+
+        <div id="activeMessage" class="activityBox hidden">
+
+          <h3 class="active">
+            🟢 ACCOUNT ACTIVE
+          </h3>
+
+          <p style="margin-top:8px;color:#bbb;">
+            Your account is activated.
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <div class="card">
+
+        <div class="title colorText2">
+          📦 INNOVA PROGRAMS
+        </div>
+
+        <div id="programGrid" class="programGrid"></div>
+
+      </div>
+
+    </section>
+
+
+    <!-- WALLET -->
+    <section id="walletSection" class="hidden">
+
+      <div class="card">
+
+        <div class="title colorText">
+          💰 WALLET
+        </div>
+
+        <div class="statRow">
+          <span>Current Balance</span>
+          <strong id="walletBalance" class="colorText">
+            ৳000
+          </strong>
+        </div>
+
+        <div class="statRow">
+          <span>Total Earnings</span>
+          <strong id="walletEarnings" class="colorText2">
+            ৳000
+          </strong>
+        </div>
+
+        <h3 style="margin-top:20px;">
+          💸 WITHDRAW
+        </h3>
+
+        <label>Amount</label>
+        <input id="withdrawAmount"
+               type="number"
+               placeholder="Enter amount">
+
+        <label>Method</label>
+        <select id="withdrawMethod"
+                style="width:100%;padding:13px;border-radius:12px;background:#17101f;color:#fff;border:1px solid #333;margin:7px 0 12px;">
+          <option>bKash</option>
+          <option>Nagad</option>
+        </select>
+
+        <label>Receiving Number</label>
+        <input id="withdrawNumber"
+               type="tel"
+               placeholder="01XXXXXXXXX">
+
+        <button class="btn" onclick="submitWithdrawal()">
+          SUBMIT WITHDRAWAL
+        </button>
+
+      </div>
+
+    </section>
+
+
+    <!-- HISTORY -->
+    <section id="historySection" class="hidden">
+
+      <div class="card">
+
+        <div class="title colorText">
+          📜 HISTORY
+        </div>
+
+        <div id="historyList">
+          <p style="color:#aaa;">
+            No history yet.
+          </p>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- NOTIFICATIONS -->
+    <section id="notificationsSection" class="hidden">
+
+      <div class="card">
+
+        <div class="title colorText2">
+          🔔 NOTIFICATIONS
+        </div>
+
+        <div id="notificationList">
+          <p style="color:#aaa;">
+            No notifications yet.
+          </p>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- TEAM -->
+    <section id="teamSection" class="hidden">
+
+      <div class="card">
+
+        <div class="title colorText3">
+          👥 MY TEAM
+        </div>
+
+        <div id="teamList">
+          <p style="color:#aaa;">
+            No team members yet.
+          </p>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- SETTINGS -->
+    <section id="settingsSection" class="hidden">
+
+      <div class="card">
+
+        <div class="title colorText">
+          ⚙️ SETTINGS
+        </div>
+
+        <label>🖼️ Profile Picture</label>
+        <input id="profileFile"
+               type="file"
+               accept="image/*">
+
+        <label>👤 Profile Name</label>
+        <input id="settingsName"
+               type="text"
+               placeholder="Enter your name">
+
+        <button class="btn" onclick="saveSettings()">
+          💾 SAVE
+        </button>
+
+        <div class="statRow" style="margin-top:15px;">
+          <span>INNOVA ID</span>
+          <strong id="settingsId">
+            001
+          </strong>
+        </div>
+
+        <div class="statRow">
+          <span>STATUS</span>
+          <strong id="settingsStatus">
+            🔴 INACTIVE
+          </strong>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ADMIN -->
+    <section id="adminSection" class="hidden">
+
+      <div class="card">
+
+        <div class="title colorText">
+          👑 SUPER ADMIN PANEL
+        </div>
+
+        <div class="statRow">
+          <span>👥 Total Partners</span>
+          <strong id="adminPartners">000</strong>
+        </div>
+
+        <div class="statRow">
+          <span>📝 Total Joining</span>
+          <strong id="adminJoining">000</strong>
+        </div>
+
+        <div class="statRow">
+          <span>💰 Total Earnings</span>
+          <strong id="adminEarnings">৳000</strong>
+        </div>
+
+      </div>
+
+
+      <div class="card">
+
+        <h3 class="colorText">
+          💳 TRANSACTIONS
+        </h3>
+
+        <div id="adminPayments"
+             class="tableWrap"
+             style="margin-top:15px;">
+        </div>
+
+      </div>
+
+
+      <div class="card">
+
+        <h3 class="colorText2">
+          💸 MONEY / FINANCIAL
+        </h3>
+
+        <div id="adminWithdrawals"
+             class="tableWrap"
+             style="margin-top:15px;">
+        </div>
+
+      </div>
+
+
+      <div class="card">
+
+        <h3 class="colorText3">
+          👥 USERS
+        </h3>
+
+        <div id="adminUsers"
+             class="tableWrap"
+             style="margin-top:15px;">
+        </div>
+
+      </div>
+
+
+      <div class="card">
+
+        <h3 class="colorText4">
+          🌳 REFERRAL / TEAM
+        </h3>
+
+        <div id="adminNetwork"
+             class="tableWrap"
+             style="margin-top:15px;">
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+</section>
+
+
+<!-- =========================================================
+     PAYMENT MODAL
+========================================================= -->
+
+<div id="paymentModal"
+     class="hidden"
+     style="
+     position:fixed;
+     inset:0;
+     z-index:400;
+     background:rgba(0,0,0,.75);
+     display:flex;
+     align-items:center;
+     justify-content:center;
+     padding:20px;">
+
+  <div class="card"
+       style="width:min(500px,100%);">
+
+    <div class="title colorText">
+      💳 ACTIVATION PAYMENT
+    </div>
+
+    <p style="color:#bbb;margin-bottom:15px;">
+      Activation Fee:
+      <strong class="colorText">
+        ৳100
+      </strong>
+    </p>
+
+    <p>
+      bKash / Nagad:
+      <strong class="colorText">
+        01313213083
+      </strong>
+    </p>
+
+    <label>Payment Method</label>
+
+    <select id="paymentMethod"
+            style="width:100%;padding:13px;border-radius:12px;background:#17101f;color:#fff;border:1px solid #333;margin:7px 0 12px;">
+      <option>bKash</option>
+      <option>Nagad</option>
+    </select>
+
+    <label>Sender Number</label>
+    <input id="senderNumber"
+           type="tel"
+           placeholder="01XXXXXXXXX">
+
+    <label>Transaction ID</label>
+    <input id="transactionId"
+           type="text"
+           placeholder="Enter TrxID">
+
+    <button class="btn" onclick="submitPayment()">
+      SUBMIT PAYMENT
+    </button>
+
+    <button class="btn secondary"
+            onclick="closePaymentModal()">
+      CANCEL
+    </button>
+
+  </div>
+</div>
+
+
+<div id="toast" class="toast">
+  Done
+</div>
+
+
+<script>
+
+/* =========================================================
+   DATABASE DEMO
+   NEW STORAGE VERSION
+========================================================= */
+
+const STORAGE_KEY = "innova_users_v3";
+const PAYMENT_KEY = "innova_payments_v3";
+const WITHDRAW_KEY = "innova_withdrawals_v3";
+const HISTORY_KEY = "innova_history_v3";
+const NOTIFY_KEY = "innova_notifications_v3";
+
+let users = JSON.parse(localStorage.getItem(STORAGE_KEY) || "[]");
+let payments = JSON.parse(localStorage.getItem(PAYMENT_KEY) || "[]");
+let withdrawals = JSON.parse(localStorage.getItem(WITHDRAW_KEY) || "[]");
+let histories = JSON.parse(localStorage.getItem(HISTORY_KEY) || "[]");
+let notifications = JSON.parse(localStorage.getItem(NOTIFY_KEY) || "[]");
+
+let currentUserId = localStorage.getItem("innova_current_user_v3") || null;
+
+
+/* =========================================================
+   HELPERS
+========================================================= */
+
+function saveAll(){
+
+  localStorage.setItem(STORAGE_KEY,JSON.stringify(users));
+  localStorage.setItem(PAYMENT_KEY,JSON.stringify(payments));
+  localStorage.setItem(WITHDRAW_KEY,JSON.stringify(withdrawals));
+  localStorage.setItem(HISTORY_KEY,JSON.stringify(histories));
+  localStorage.setItem(NOTIFY_KEY,JSON.stringify(notifications));
+
+}
+
+function pad3(number){
+
+  return String(Math.max(0,Number(number)||0))
+    .padStart(3,"0");
+
+}
+
+function money(number){
+
+  return "৳" + pad3(number);
+
+}
+
+function getUser(){
+
+  return users.find(u => u.id === currentUserId);
+
+}
+
+function nextId(){
+
+  if(users.length === 0){
+    return "001";
+  }
+
+  let max = 0;
+
+  users.forEach(u=>{
+    let n = parseInt(u.id,10);
+    if(n > max) max = n;
+  });
+
+  return String(max + 1).padStart(3,"0");
+
+}
+
+function showToast(text){
+
+  const toast = document.getElementById("toast");
+
+  toast.textContent = text;
+  toast.classList.add("show");
+
+  setTimeout(()=>{
+    toast.classList.remove("show");
+  },2200);
+
+}
+
+function todayString(){
+
+  const d = new Date();
+
+  const day = String(d.getDate()).padStart(2,"0");
+  const month = String(d.getMonth()+1).padStart(2,"0");
+  const year = d.getFullYear();
+
+  return `${year}-${month}-${day}`;
+
+}
+
+function formatDate(date){
+
+  return new Date(date).toLocaleDateString(
+    "en-GB",
+    {
+      day:"2-digit",
+      month:"long",
+      year:"numeric"
+    }
+  );
+
+}
+
+function formatTime(date){
+
+  return new Date(date).toLocaleTimeString(
+    "en-US",
+    {
+      hour:"2-digit",
+      minute:"2-digit",
+      second:"2-digit"
+    }
+  );
+
+}
+
+
+/* =========================================================
+   PAGE NAVIGATION
+========================================================= */
+
+function hideAllPages(){
+
+  document.getElementById("welcome").classList.add("hidden");
+  document.getElementById("registerPage").classList.add("hidden");
+  document.getElementById("loginPage").classList.add("hidden");
+  document.getElementById("appPage").classList.add("hidden");
+
+}
+
+function showWelcome(){
+
+  hideAllPages();
+  document.getElementById("welcome").classList.remove("hidden");
+
+}
+
+function showRegister(){
+
+  hideAllPages();
+  document.getElementById("registerPage").classList.remove("hidden");
+
+  applyReferralFromURL();
+
+}
+
+function showLogin(){
+
+  hideAllPages();
+  document.getElementById("loginPage").classList.remove("hidden");
+
+}
+
+function showApp(){
+
+  hideAllPages();
+  document.getElementById("appPage").classList.remove("hidden");
+
+  renderApp();
+
+}
+
+
+/* =========================================================
+   REFERRAL URL
+========================================================= */
+
+function applyReferralFromURL(){
+
+  const params = new URLSearchParams(location.search);
+
+  let ref = params.get("ref");
+
+  if(ref){
+
+    ref = ref.replace(/\D/g,"");
+
+    if(ref){
+
+      ref = String(parseInt(ref,10)).padStart(3,"0");
+
+      const input = document.getElementById("regReferral");
+
+      input.value = ref;
+
+      const refUser = users.find(u=>u.id === ref);
+
+      const notice = document.getElementById("refNotice");
+
+      if(refUser){
+
+        notice.textContent =
+          "✅ Referral verified: ID " + ref;
+
+        notice.style.color = "#45e276";
+
+      }else{
+
+        notice.textContent =
+          "⚠️ This referral ID does not exist.";
+
+        notice.style.color = "#ff5757";
+
+      }
+
+    }
+
+  }else{
+
+    document.getElementById("refNotice").textContent =
+      users.length === 0
+      ? "First registration can be without referral."
+      : "Referral ID is required.";
+
+  }
+
+}
+
+
+/* =========================================================
+   REGISTER
+========================================================= */
+
+function registerUser(){
+
+  const name =
+    document.getElementById("regName").value.trim();
+
+  const mobile =
+    document.getElementById("regMobile").value.trim();
+
+  const password =
+    document.getElementById("regPassword").value;
+
+  let referral =
+    document.getElementById("regReferral").value.trim();
+
+  if(!name || !mobile || !password){
+
+    showToast("সব তথ্য পূরণ করুন।");
+    return;
+
+  }
+
+  if(password.length < 4){
+
+    showToast("Password কমপক্ষে 4 অক্ষরের দিন।");
+    return;
+
+  }
+
+
+  if(users.some(u=>u.mobile === mobile)){
+
+    showToast("এই mobile দিয়ে account আছে।");
+    return;
+
+  }
+
+
+  if(referral){
+
+    referral =
+      String(parseInt(referral.replace(/\D/g,""),10))
+      .padStart(3,"0");
+
+  }
+
+
+  /* FIRST USER = 001 */
+
+  if(users.length === 0){
+
+    referral = null;
+
+  }else{
+
+    if(!referral){
+
+      showToast("Referral ID প্রয়োজন।");
+      return;
+
+    }
+
+    const upline =
+      users.find(u=>u.id === referral);
+
+    if(!upline){
+
+      showToast("Valid Referral ID দিন।");
+      return;
+
+    }
+
+  }
+
+
+  const id = nextId();
+
+  const now = new Date().toISOString();
+
+  const user = {
+
+    id:id,
+    name:name,
+    mobile:mobile,
+    password:password,
+
+    upline:referral || null,
+
+    role:id === "001"
+      ? "SUPER_ADMIN"
+      : "USER",
+
+    status:id === "001"
+      ? "ACTIVE"
+      : "INACTIVE",
+
+    joinedAt:now,
+
+    earnings:0,
+
+    profileImage:"",
+
+    activated:id === "001",
+
+    activities:{}
+
+  };
+
+
+  users.push(user);
+
+  histories.push({
+
+    id:Date.now(),
+    userId:id,
+    type:"REGISTRATION",
+    text:"Account created",
+    date:now
+
+  });
+
+
+  notifications.push({
+
+    id:Date.now()+1,
+    userId:id,
+    text:"Welcome to INNOVA.GLOBAL",
+    date:now
+
+  });
+
+
+  saveAll();
+
+
+  currentUserId = id;
+
+  localStorage.setItem(
+    "innova_current_user_v3",
+    id
+  );
+
+
+  showToast(
+    "Account created! INNOVA ID: " + id
+  );
+
+  setTimeout(showApp,500);
+
+}
+
+
+/* =========================================================
+   LOGIN
+========================================================= */
+
+function loginUser(){
+
+  const identity =
+    document.getElementById("loginIdentity")
+      .value.trim();
+
+  const password =
+    document.getElementById("loginPassword")
+      .value;
+
+  const user =
+    users.find(u =>
+      (u.id === identity || u.mobile === identity)
+      &&
+      u.password === password
+    );
+
+  if(!user){
+
+    showToast("ID/Mobile অথবা Password ভুল।");
+    return;
+
+  }
+
+  currentUserId = user.id;
+
+  localStorage.setItem(
+    "innova_current_user_v3",
+    user.id
+  );
+
+  showToast("Login successful");
+
+  setTimeout(showApp,400);
+
+}
+
+
+/* =========================================================
+   LOGOUT
+========================================================= */
+
+function logoutUser(){
+
+  currentUserId = null;
+
+  localStorage.removeItem(
+    "innova_current_user_v3"
+  );
+
+  document.getElementById("sideMenu")
+    .classList.remove("open");
+
+  showWelcome();
+
+}
+
+
+/* =========================================================
+   MENU
+========================================================= */
+
+function toggleMenu(){
+
+  document.getElementById("sideMenu")
+    .classList.toggle("open");
+
+}
+
+function showSection(section){
+
+  const sections = [
+    "dashboard",
+    "wallet",
+    "history",
+    "notifications",
+    "team",
+    "admin",
+    "settings"
+  ];
+
+  sections.forEach(s=>{
+
+    const el =
+      document.getElementById(s+"Section");
+
+    if(el){
+
+      el.classList.add("hidden");
+
+    }
+
+  });
+
+
+  if(section === "dashboard"){
+    document.getElementById("dashboardSection")
+      .classList.remove("hidden");
+  }
+
+  if(section === "wallet"){
+    document.getElementById("walletSection")
+      .classList.remove("hidden");
+  }
+
+  if(section === "history"){
+    document.getElementById("historySection")
+      .classList.remove("hidden");
+  }
+
+  if(section === "notifications"){
+    document.getElementById("notificationsSection")
+      .classList.remove("hidden");
+  }
+
+  if(section === "team"){
+    document.getElementById("teamSection")
+      .classList.remove("hidden");
+  }
+
+  if(section === "admin"){
+    document.getElementById("adminSection")
+      .classList.remove("hidden");
+  }
+
+  if(section === "settings"){
+    document.getElementById("settingsSection")
+      .classList.remove("hidden");
+  }
+
+
+  document.getElementById("sideMenu")
+    .classList.remove("open");
+
+}
+
+
+/* =========================================================
+   SETTINGS
+========================================================= */
+
+function openSettings(){
+
+  document.getElementById("settingsSection")
+    .classList.remove("hidden");
+
+  [
+    "dashboard",
+    "wallet",
+    "history",
+    "notifications",
+    "team",
+    "admin"
+  ].forEach(s=>{
+
+    const el =
+      document.getElementById(s+"Section");
+
+    if(el) el.classList.add("hidden");
+
+  });
+
+  const user = getUser();
+
+  if(!user) return;
+
+  document.getElementById("settingsName")
+    .value = user.name;
+
+  document.getElementById("settingsId")
+    .textContent = user.id;
+
+  document.getElementById("settingsStatus")
+    .innerHTML =
+      user.status === "ACTIVE"
+      ? '<span class="active">🟢 ACTIVE</span>'
+      : '<span class="inactive">🔴 INACTIVE</span>';
+
+}
+
+function saveSettings(){
+
+  const user = getUser();
+
+  if(!user) return;
+
+  const name =
+    document.getElementById("settingsName")
+      .value.trim();
+
+  if(name){
+    user.name = name;
+  }
+
+
+  const file =
+    document.getElementById("profileFile")
+      .files[0];
+
+  if(file){
+
+    const reader = new FileReader();
+
+    reader.onload = function(e){
+
+      user.profileImage =
+        e.target.result;
+
+      saveAll();
+      renderApp();
+
+      showToast("Profile saved");
+
+    };
+
+    reader.readAsDataURL(file);
+
+  }else{
+
+    saveAll();
+    renderApp();
+
+    showToast("Profile saved");
+
+  }
+
+}
+
+
+/* =========================================================
+   PROFILE SHOW MORE
+========================================================= */
+
+function toggleMore(){
+
+  document.getElementById("moreBox")
+    .classList.toggle("hidden");
+
+}
+
+function copyReferral(){
+
+  const input =
+    document.getElementById("myReferralLink");
+
+  navigator.clipboard.writeText(input.value)
+    .then(()=>{
+      showToast("Referral link copied");
+    })
+    .catch(()=>{
+      input.select();
+      document.execCommand("copy");
+      showToast("Referral link copied");
+    });
+
+}
+
+
+/* =========================================================
+   PROFILE RENDER
+========================================================= */
+
+function getDirectPartners(userId){
+
+  return users.filter(
+    u=>u.upline === userId
+  );
+
+}
+
+function getTeamCount(userId){
+
+  const visited = new Set();
+
+  function walk(id){
+
+    const children =
+      users.filter(u=>u.upline === id);
+
+    children.forEach(child=>{
+
+      if(!visited.has(child.id)){
+
+        visited.add(child.id);
+
+        walk(child.id);
+
+      }
+
+    });
+
+  }
+
+  walk(userId);
+
+  return visited.size;
+
+}
+
+function renderProfile(){
+
+  const user = getUser();
+
+  if(!user) return;
+
+
+  document.getElementById("profileName")
+    .textContent = user.name;
+
+  document.getElementById("profileRole")
+    .textContent = user.role === "SUPER_ADMIN"
+      ? "SUPER ADMIN"
+      : "USER";
+
+  document.getElementById("profileId")
+    .textContent = user.id;
+
+  document.getElementById("profileUpline")
+    .textContent = user.upline || "NONE";
+
+  document.getElementById("moreId")
+    .textContent = user.id;
+
+  document.getElementById("moreUpline")
+    .textContent = user.upline || "NONE";
+
+
+  const statusEl =
+    document.getElementById("profileStatus");
+
+  statusEl.innerHTML =
+    user.status === "ACTIVE"
+      ? '<span class="active">🟢 ACTIVE</span>'
+      : '<span class="inactive">🔴 INACTIVE</span>';
+
+
+  const partners =
+    getDirectPartners(user.id).length;
+
+  const team =
+    getTeamCount(user.id);
+
+
+  document.getElementById("profilePartners")
+    .textContent = pad3(partners);
+
+  document.getElementById("profileTeam")
+    .textContent = pad3(team);
+
+  document.getElementById("profileEarnings")
+    .textContent = money(user.earnings);
+
+
+  document.getElementById("myReferralLink")
+    .value =
+      location.origin +
+      location.pathname +
+      "?ref=" +
+      user.id;
+
+
+  const joined =
+    new Date(user.joinedAt);
+
+  document.getElementById("joiningDate")
+    .textContent = formatDate(joined);
+
+  document.getElementById("joiningTime")
+    .textContent = formatTime(joined);
+
+
+  const days =
+    Math.floor(
+      (Date.now() - joined.getTime())
+      / (1000*60*60*24)
+    );
+
+  document.getElementById("joiningDuration")
+    .textContent =
+      Math.max(0,days) + " Days";
+
+
+  const img =
+    document.getElementById("profileImage");
+
+  if(user.profileImage){
+
+    img.src = user.profileImage;
+
+  }else{
+
+    img.src =
+      "data:image/svg+xml;charset=UTF-8," +
+      encodeURIComponent(`
+      <svg xmlns="http://www.w3.org/2000/svg"
+           width="100" height="100">
+        <rect width="100%" height="100%"
+              fill="#21172b"/>
+        <text x="50%" y="55%"
+              text-anchor="middle"
+              fill="#d4af37"
+              font-size="40">👤</text>
+      </svg>
+      `);
+
+  }
+
+}
+
+
+/* =========================================================
+   PROGRAMS
+========================================================= */
+
+const programs = [
+
+  {
+    id:"starter",
+    name:"INNOVA STARTER",
+    price:100
+  },
+
+  {
+    id:"basic",
+    name:"INNOVA BASIC",
+    price:200
+  },
+
+  {
+    id:"standard",
+    name:"INNOVA STANDARD",
+    price:300
+  },
+
+  {
+    id:"premium",
+    name:"INNOVA PREMIUM",
+    price:400
+  },
+
+  {
+    id:"vip",
+    name:"INNOVA VIP",
+    price:500
+  }
+
+];
+
+
+function renderPrograms(){
+
+  const user = getUser();
+
+  const grid =
+    document.getElementById("programGrid");
+
+  grid.innerHTML = "";
+
+
+  programs.forEach((program,index)=>{
+
+    const card =
+      document.createElement("div");
+
+    card.className = "program";
+
+
+    card.innerHTML = `
+
+      <h3 class="colorText${(index%4)+1}">
+        ${program.name}
+      </h3>
+
+      <div class="programPrice colorText">
+        ৳${program.price}
+      </div>
+
+      <div style="color:#aaa;font-size:13px;">
+        12 Activities
+      </div>
+
+      <button class="btn"
+              onclick="startProgram('${program.id}')">
+        OPEN PROGRAM
+      </button>
+
+      <div id="activity-${program.id}"
+           class="activityBox hidden">
+      </div>
+
+    `;
+
+    grid.appendChild(card);
+
+  });
+
+}
+
+
+function startProgram(programId){
+
+  const user = getUser();
+
+  if(!user) return;
+
+
+  if(user.status !== "ACTIVE"){
+
+    showToast(
+      "প্রথমে account activate করুন।"
+    );
+
+    return;
+
+  }
+
+
+  if(!user.activities){
+    user.activities = {};
+  }
+
+
+  if(!user.activities[programId]){
+
+    user.activities[programId] = {
+      completed:0,
+      running:false
+    };
+
+  }
+
+
+  const activity =
+    user.activities[programId];
+
+  const box =
+    document.getElementById(
+      "activity-"+programId
+    );
+
+  box.classList.remove("hidden");
+
+  renderActivity(programId);
+
+}
+
+
+function renderActivity(programId){
+
+  const user = getUser();
+
+  const activity =
+    user.activities[programId];
+
+  const completed =
+    activity.completed || 0;
+
+
+  const box =
+    document.getElementById(
+      "activity-"+programId
+    );
+
+  const percent =
+    (completed/12)*100;
+
+
+  box.innerHTML = `
+
+    <strong class="colorText">
+      ACTIVITY PROGRESS
+    </strong>
+
+    <div style="margin-top:8px;">
+      ${completed}/12
+    </div>
+
+    <div class="progress">
+      <div class="progressBar"
+           style="width:${percent}%">
+      </div>
+    </div>
+
+    ${
+      completed < 12
+      ?
+      `<button class="btn"
+          onclick="runActivity('${programId}')">
+          START ACTIVITY
+       </button>`
+      :
+      `<div class="active">
+          ✅ ALL 12 ACTIVITIES COMPLETED
+       </div>`
+    }
+
+  `;
+
+}
+
+
+function runActivity(programId){
+
+  const user = getUser();
+
+  if(!user) return;
+
+
+  const activity =
+    user.activities[programId];
+
+
+  if(activity.running) return;
+
+
+  activity.running = true;
+
+  renderActivity(programId);
+
+
+  let seconds = 20;
+
+  const box =
+    document.getElementById(
+      "activity-"+programId
+    );
+
+
+  const timer =
+    setInterval(()=>{
+
+      seconds--;
+
+      if(seconds <= 0){
+
+        clearInterval(timer);
+
+        activity.completed++;
+        activity.running = false;
+
+        saveAll();
+
+        renderActivity(programId);
+
+        renderHistory();
+
+        showToast(
+          "Activity completed"
+        );
+
+      }else{
+
+        box.innerHTML = `
+
+          <strong class="processing">
+            ⏳ PROCESSING...
+          </strong>
+
+          <p style="margin-top:8px;">
+            ${seconds} seconds remaining
+          </p>
+
+        `;
+
+      }
+
+    },1000);
+
+}
+
+
+/* =========================================================
+   ACTIVATION
+========================================================= */
+
+function openPaymentModal(){
+
+  const user = getUser();
+
+  if(!user) return;
+
+  if(user.status === "ACTIVE"){
+
+    showToast("Account already active");
+    return;
+
+  }
+
+  document.getElementById("paymentModal")
+    .classList.remove("hidden");
+
+}
+
+function closePaymentModal(){
+
+  document.getElementById("paymentModal")
+    .classList.add("hidden");
+
+}
+
+
+function submitPayment(){
+
+  const user = getUser();
+
+  if(!user) return;
+
+
+  const method =
+    document.getElementById("paymentMethod")
+      .value;
+
+  const sender =
+    document.getElementById("senderNumber")
+      .value.trim();
+
+  const trx =
+    document.getElementById("transactionId")
+      .value.trim();
+
+
+  if(!sender || !trx){
+
+    showToast(
+      "Sender number ও TrxID দিন।"
+    );
+
+    return;
+
+  }
+
+
+  const now =
+    new Date().toISOString();
+
+
+  payments.push({
+
+    id:Date.now(),
+
+    userId:user.id,
+
+    amount:100,
+
+    method:method,
+
+    senderNumber:sender,
+
+    transactionId:trx,
+
+    status:"PENDING",
+
+    date:now
+
+  });
+
+
+  histories.push({
+
+    id:Date.now()+1,
+
+    userId:user.id,
+
+    type:"PAYMENT",
+
+    text:
+      "Activation payment submitted",
+
+    date:now
+
+  });
+
+
+  notifications.push({
+
+    id:Date.now()+2,
+
+    userId:user.id,
+
+    text:
+      "Activation payment is pending admin verification.",
+
+    date:now
+
+  });
+
+
+  saveAll();
+
+  closePaymentModal();
+
+  renderApp();
+
+  showToast(
+    "Payment submitted: PENDING"
+  );
+
+}
+
+
+/* =========================================================
+   WALLET
+========================================================= */
+
+function submitWithdrawal(){
+
+  const user = getUser();
+
+  if(!user) return;
+
+
+  const amount =
+    Number(
+      document.getElementById("withdrawAmount")
+        .value
+    );
+
+  const method =
+    document.getElementById("withdrawMethod")
+      .value;
+
+  const number =
+    document.getElementById("withdrawNumber")
+      .value.trim();
+
+
+  if(!amount || amount <= 0){
+
+    showToast("Valid amount দিন।");
+    return;
+
+  }
+
+  if(!number){
+
+    showToast("Receiving number দিন।");
+    return;
+
+  }
+
+
+  if(amount > Number(user.earnings || 0)){
+
+    showToast("Insufficient balance");
+    return;
+
+  }
+
+
+  withdrawals.push({
+
+    id:Date.now(),
+
+    userId:user.id,
+
+    amount:amount,
+
+    method:method,
+
+    number:number,
+
+    status:"PENDING",
+
+    date:new Date().toISOString()
+
+  });
+
+
+  histories.push({
+
+    id:Date.now()+1,
+
+    userId:user.id,
+
+    type:"WITHDRAWAL",
+
+    text:
+      "Withdrawal request submitted",
+
+    date:new Date().toISOString()
+
+  });
+
+
+  notifications.push({
+
+    id:Date.now()+2,
+
+    userId:user.id,
+
+    text:
+      "Withdrawal request is pending.",
+
+    date:new Date().toISOString()
+
+  });
+
+
+  saveAll();
+
+  renderWallet();
+
+  renderHistory();
+
+  renderNotifications();
+
+  showToast("Withdrawal submitted");
+
+}
+
+
+/* =========================================================
+   HISTORY
+========================================================= */
+
+function renderHistory(){
+
+  const user = getUser();
+
+  if(!user) return;
+
+
+  const list =
+    document.getElementById("historyList");
+
+
+  const data =
+    histories
+      .filter(h=>h.userId === user.id)
+      .sort((a,b)=>b.id-a.id);
+
+
+  if(data.length === 0){
+
+    list.innerHTML =
+      '<p style="color:#aaa;">No history yet.</p>';
+
+    return;
+
+  }
+
+
+  list.innerHTML =
+    data.map(h=>`
+
+      <div class="activityBox">
+
+        <strong>
+          ${h.type}
+        </strong>
+
+        <div style="color:#bbb;margin-top:5px;">
+          ${h.text}
+        </div>
+
+        <div style="color:#777;font-size:12px;margin-top:5px;">
+          ${formatDate(h.date)}
+          ${formatTime(h.date)}
+        </div>
+
+      </div>
+
+    `).join("");
+
+}
+
+
+/* =========================================================
+   NOTIFICATIONS
+========================================================= */
+
+function renderNotifications(){
+
+  const user = getUser();
+
+  if(!user) return;
+
+
+  const list =
+    document.getElementById(
+      "notificationList"
+    );
+
+
+  const data =
+    notifications
+      .filter(n=>n.userId === user.id)
+      .sort((a,b)=>b.id-a.id);
+
+
+  if(data.length === 0){
+
+    list.innerHTML =
+      '<p style="color:#aaa;">No notifications yet.</p>';
+
+    return;
+
+  }
+
+
+  list.innerHTML =
+    data.map(n=>`
+
+      <div class="activityBox">
+
+        🔔 ${n.text}
+
+        <div style="color:#777;font-size:12px;margin-top:6px;">
+          ${formatDate(n.date)}
+          ${formatTime(n.date)}
+        </div>
+
+      </div>
+
+    `).join("");
+
+}
+
+
+/* =========================================================
+   TEAM
+========================================================= */
+
+function renderTeam(){
+
+  const user = getUser();
+
+  if(!user) return;
+
+
+  const list =
+    document.getElementById("teamList");
+
+
+  const team =
+    users.filter(
+      u=>u.upline === user.id
+    );
+
+
+  if(team.length === 0){
+
+    list.innerHTML =
+      '<p style="color:#aaa;">No team members yet.</p>';
+
+    return;
+
+  }
+
+
+  list.innerHTML =
+    team.map(u=>`
+
+      <div class="activityBox">
+
+        <strong class="colorText">
+          ${u.name}
+        </strong>
+
+        <div style="margin-top:6px;">
+          INNOVA ID:
+          <strong>${u.id}</strong>
+        </div>
+
+        <div>
+          UPLINE:
+          <strong>${u.upline || "NONE"}</strong>
+        </div>
+
+        <div>
+          STATUS:
+          ${
+            u.status === "ACTIVE"
+            ? '<span class="active">🟢 ACTIVE</span>'
+            : '<span class="inactive">🔴 INACTIVE</span>'
+          }
+        </div>
+
+      </div>
+
+    `).join("");
+
+}
+
+
+/* =========================================================
+   ADMIN
+========================================================= */
+
+function renderAdmin(){
+
+  const user = getUser();
+
+  if(!user || user.role !== "SUPER_ADMIN"){
+
+    return;
+
+  }
+
+
+  const totalJoining =
+    users.length;
+
+  const totalPartners =
+    users.filter(
+      u=>u.id !== "001"
+    ).length;
+
+
+  /*
+    Earnings here are actual stored earnings.
+    No random values.
+  */
+
+  const totalEarnings =
+    users.reduce(
+      (sum,u)=>sum + Number(u.earnings || 0),
+      0
+    );
+
+
+  document.getElementById("adminPartners")
+    .textContent = pad3(totalPartners);
+
+  document.getElementById("adminJoining")
+    .textContent = pad3(totalJoining);
+
+  document.getElementById("adminEarnings")
+    .textContent = money(totalEarnings);
+
+
+  /* PAYMENTS */
+
+  const paymentBox =
+    document.getElementById(
+      "adminPayments"
+    );
+
+
+  if(payments.length === 0){
+
+    paymentBox.innerHTML =
+      '<p style="color:#aaa;">No payment requests.</p>';
+
+  }else{
+
+    paymentBox.innerHTML = `
+
+      <table>
+
+        <tr>
+          <th>User</th>
+          <th>Amount</th>
+          <th>Method</th>
+          <th>TrxID</th>
+          <th>Status</th>
+        </tr>
+
+        ${
+          payments.map(p=>`
+
+            <tr>
+
+              <td>${p.userId}</td>
+
+              <td>${money(p.amount)}</td>
+
+              <td>${p.method}</td>
+
+              <td>${p.transactionId}</td>
+
+              <td>${p.status}</td>
+
+            </tr>
+
+          `).join("")
+        }
+
+      </table>
+
+    `;
+
+  }
+
+
+  /* WITHDRAWALS */
+
+  const withdrawalBox =
+    document.getElementById(
+      "adminWithdrawals"
+    );
+
+
+  if(withdrawals.length === 0){
+
+    withdrawalBox.innerHTML =
+      '<p style="color:#aaa;">No withdrawal requests.</p>';
+
+  }else{
+
+    withdrawalBox.innerHTML = `
+
+      <table>
+
+        <tr>
+          <th>User</th>
+          <th>Amount</th>
+          <th>Method</th>
+          <th>Number</th>
+          <th>Status</th>
+        </tr>
+
+        ${
+          withdrawals.map(w=>`
+
+            <tr>
+
+              <td>${w.userId}</td>
+
+              <td>${money(w.amount)}</td>
+
+              <td>${w.method}</td>
+
+              <td>${w.number}</td>
+
+              <td>${w.status}</td>
+
+            </tr>
+
+          `).join("")
+        }
+
+      </table>
+
+    `;
+
+  }
+
+
+  /* USERS */
+
+  const userBox =
+    document.getElementById("adminUsers");
+
+
+  userBox.innerHTML = `
+
+    <table>
+
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Upline</th>
+        <th>Status</th>
+        <th>Joined</th>
+      </tr>
+
+      ${
+        users.map(u=>`
+
+          <tr>
+
+            <td>${u.id}</td>
+
+            <td>${u.name}</td>
+
+            <td>${u.upline || "NONE"}</td>
+
+            <td>${u.status}</td>
+
+            <td>
+              ${formatDate(u.joinedAt)}
+            </td>
+
+          </tr>
+
+        `).join("")
+      }
+
+    </table>
+
+  `;
+
+
+  /* NETWORK */
+
+  const networkBox =
+    document.getElementById(
+      "adminNetwork"
+    );
+
+
+  networkBox.innerHTML = `
+
+    <table>
+
+      <tr>
+        <th>ID</th>
+        <th>Upline</th>
+        <th>Direct Partners</th>
+        <th>Team</th>
+      </tr>
+
+      ${
+        users.map(u=>`
+
+          <tr>
+
+            <td>${u.id}</td>
+
+            <td>${u.upline || "NONE"}</td>
+
+            <td>
+              ${getDirectPartners(u.id).length}
+            </td>
+
+            <td>
+              ${getTeamCount(u.id)}
+            </td>
+
+          </tr>
+
+        `).join("")
+      }
+
+    </table>
+
+  `;
+
+}
+
+
+/* =========================================================
+   DASHBOARD STATUS
+========================================================= */
+
+function renderActivation(){
+
+  const user = getUser();
+
+  if(!user) return;
+
+
+  document.getElementById("activationId")
+    .textContent = user.id;
+
+
+  const status =
+    document.getElementById(
+      "activationStatus"
+    );
+
+
+  if(user.status === "ACTIVE"){
+
+    status.innerHTML =
+      '<span class="active">🟢 ACTIVE</span>';
+
+    document.getElementById("activationBox")
+      .classList.add("hidden");
+
+    document.getElementById("activeMessage")
+      .classList.remove("hidden");
+
+  }else{
+
+    status.innerHTML =
+      '<span class="inactive">🔴 INACTIVE</span>';
+
+    document.getElementById("activationBox")
+      .classList.remove("hidden");
+
+    document.getElementById("activeMessage")
+      .classList.add("hidden");
+
+  }
+
+}
+
+
+/* =========================================================
+   WALLET RENDER
+========================================================= */
+
+function renderWallet(){
+
+  const user = getUser();
+
+  if(!user) return;
+
+
+  document.getElementById("walletBalance")
+    .textContent =
+      money(user.earnings);
+
+  document.getElementById("walletEarnings")
+    .textContent =
+      money(user.earnings);
+
+}
+
+
+/* =========================================================
+   GLOBAL LANDING STATISTICS
+   REFRESH EVERY 15 SECONDS
+========================================================= */
+
+function updateLandingStats(){
+
+  /*
+    IMPORTANT:
+    No random/fake numbers.
+    Values come from current stored data.
+    In production these same functions will read
+    from Supabase.
+  */
+
+
+  const totalJoining =
+    users.length;
+
+
+  const totalPartners =
+    users.filter(
+      u=>u.id !== "001"
+    ).length;
+
+
+  const totalEarnings =
+    users.reduce(
+      (sum,u)=>sum + Number(u.earnings || 0),
+      0
+    );
+
+
+  /*
+    Today's joining
+  */
+
+  const today =
+    todayString();
+
+
+  const todayJoining =
+    users.filter(u=>{
+
+      return todayStringFromISO(u.joinedAt)
+        === today;
+
+    }).length;
+
+
+  /*
+    Exactly 3 digits for all counts.
+    Earnings also exactly 3 digits.
+  */
+
+  document.getElementById("totalPartners")
+    .textContent =
+      pad3(totalPartners);
+
+
+  document.getElementById("totalJoining")
+    .textContent =
+      pad3(totalJoining);
+
+
+  document.getElementById("todayJoining")
+    .textContent =
+      pad3(todayJoining);
+
+
+  document.getElementById("totalEarnings")
+    .textContent =
+      money(totalEarnings);
+
+
+  /*
+    If logged in, refresh profile/wallet/admin too.
+  */
+
+  if(currentUserId){
+
+    const user = getUser();
+
+    if(user){
+
+      renderProfile();
+      renderWallet();
+
+      if(user.role === "SUPER_ADMIN"){
+        renderAdmin();
+      }
+
+    }
+
+  }
+
+}
+
+
+function todayStringFromISO(iso){
+
+  const d = new Date(iso);
+
+  const day =
+    String(d.getDate()).padStart(2,"0");
+
+  const month =
+    String(d.getMonth()+1).padStart(2,"0");
+
+  const year =
+    d.getFullYear();
+
+  return `${year}-${month}-${day}`;
+
+}
+
+
+/* =========================================================
+   FULL APP RENDER
+========================================================= */
+
+function renderApp(){
+
+  const user = getUser();
+
+  if(!user){
+
+    showWelcome();
+    return;
+
+  }
+
+
+  renderProfile();
+  renderActivation();
+  renderPrograms();
+  renderWallet();
+  renderHistory();
+  renderNotifications();
+  renderTeam();
+
+
+  if(user.role === "SUPER_ADMIN"){
+
+    document.getElementById("adminMenuBtn")
+      .classList.remove("hidden");
+
+    renderAdmin();
+
+  }else{
+
+    document.getElementById("adminMenuBtn")
+      .classList.add("hidden");
+
+  }
+
+}
+
+
+/* =========================================================
+   STARTUP
+========================================================= */
+
+function startup(){
+
+  /*
+    If no logged-in user:
+    show welcome.
+  */
+
+  showWelcome();
+
+  /*
+    Read referral if URL contains ?ref=001
+  */
+
+  applyReferralFromURL();
+
+  /*
+    Initial statistics.
+  */
+
+  updateLandingStats();
+
+}
+
+
+/* =========================================================
+   15 SECOND LIVE REFRESH
+========================================================= */
+
+setInterval(()=>{
+
+  /*
+    Every 15 seconds:
+    read latest stored data
+    and update every statistic.
+  */
+
+  users =
+    JSON.parse(
+      localStorage.getItem(STORAGE_KEY) || "[]"
+    );
+
+  payments =
+    JSON.parse(
+      localStorage.getItem(PAYMENT_KEY) || "[]"
+    );
+
+  withdrawals =
+    JSON.parse(
+      localStorage.getItem(WITHDRAW_KEY) || "[]"
+    );
+
+  histories =
+    JSON.parse(
+      localStorage.getItem(HISTORY_KEY) || "[]"
+    );
+
+  notifications =
+    JSON.parse(
+      localStorage.getItem(NOTIFY_KEY) || "[]"
+    );
+
+
+  updateLandingStats();
+
+
+  if(currentUserId){
+
+    const user = getUser();
+
+    if(user){
+
+      renderProfile();
+      renderWallet();
+      renderHistory();
+      renderNotifications();
+      renderTeam();
+
+      if(user.role === "SUPER_ADMIN"){
+        renderAdmin();
+      }
+
+    }
+
+  }
+
+},15000);
+
+
+/* =========================================================
+   RUN
+========================================================= */
+
+startup();
+
+</script>
+
+</body>
+</html>
